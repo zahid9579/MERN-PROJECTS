@@ -1,12 +1,25 @@
 import React from 'react'
-import Registration from './pages/Registration'
-import Login from './pages/Login'
+import { Outlet } from 'react-router-dom'
+import Navigation from './redux/Auth/Navigation'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import Registration from './pages/Registration'
+// import Login from './pages/Login'
 
 const App = () => {
   return (
     <div>
-      <Registration/>
-      <Login/>
+      <ToastContainer/>
+      <Navigation/>
+      <main className='py-3'>
+        <Outlet/>
+        
+      </main>
+
+      {/* <Registration/>
+      <Login/> */}
+
+
     </div>
   )
 }
